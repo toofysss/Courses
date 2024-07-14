@@ -1,0 +1,60 @@
+.Archive {
+  padding-bottom: 6rem;
+}
+
+.Archive .heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.Archive .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.Archive .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+ 
+.Archive .Archive-column h2,
+.Archive .content h2 {
+  text-align: start;
+  font-size: 3rem;
+  color: var(--spancolor);
+}
+
+.Archive .Archive-column h3 {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--black);
+  opacity: 0.5;
+}
+.Archive .Archive-column i {
+  color: var(--spancolor);
+  font-size: 2rem;
+}
+.Archive .item-container {
+  display: flex;
+  align-items: center;
+}
+.Archive .Archive-content h4 {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.7;
+  margin-inline: 100px;
+}
+.Archive .Archive-content .content {
+  align-items: start;
+  justify-content: start;
+}

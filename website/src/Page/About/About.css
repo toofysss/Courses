@@ -1,0 +1,88 @@
+.about {
+  padding-bottom: 6rem;
+}
+
+.about .heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.about .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.about .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+
+.about .about-content .about-row {
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+.about .about-row .about-column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 1rem;
+}
+.about .about-column h2,
+.about .content h2 {
+  font-size: 3rem;
+  color: var(--titlecolor);
+}
+.about .about-column p,
+.about .content p {
+  font-size: 1.5rem;
+  color: var(--black);
+  opacity: 0.5;
+  margin-block: 25px;
+}
+.about .about-column h3 {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--black);
+  opacity: 0.5;
+}
+.about .about-column i {
+  color: var(--spancolor);
+  font-size: 2rem;
+}
+.about .item-container {
+  display: flex;
+}
+.about .about-content h4 {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.7;
+  margin-inline: 100px;
+}
+.about .about-content .content {
+  align-items: start;
+  justify-content: start;
+}
+
+@media (max-width: 338px) {
+  .about .about-column h2,
+  .about .content h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 835px) {
+  .about .about-content h4 {
+    margin-inline: 0;
+  }
+}

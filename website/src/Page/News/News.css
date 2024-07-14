@@ -1,0 +1,129 @@
+.News {
+  padding-bottom: 6rem;
+}
+
+.News .heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.News .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.News .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+
+.News .column-card {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.News .card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+  padding-inline: 5px;
+  border-radius: 0.8rem;
+  background-color: transparent !important;
+}
+.News .card img {
+  cursor: pointer;
+
+  margin-block: 5px;
+  border-radius: 0.8rem;
+  height: 300px;
+  width: 100%;
+}
+.News .panel {
+  cursor: pointer;
+
+  background-color: transparent !important;
+  padding: 15px 20px;
+}
+.News .panel p {
+  cursor: pointer;
+
+  font-size: 2.5rem;
+  color: var(--titlecolor);
+  opacity: 1;
+}
+.News span.date {
+  cursor: pointer;
+
+  color: var(--spancolor);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.News span.breaker {
+  cursor: pointer;
+
+  margin-block: 10px;
+  display: inline-block;
+  height: 5px;
+  background: var(--spancolor);
+  width: 30px;
+  position: relative;
+  border-radius: 4px;
+}
+.News .breaker::after {
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  background: var(--spancolor);
+  width: 30px;
+  height: 5px;
+  left: 150%;
+  border-radius: 4px;
+}
+
+.News .pagination {
+ 
+  margin-top: 35px;
+  margin-inline: auto;
+  display: flex;
+  background-color: var(--spancolor);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.News .pagination .pagging-btn:hover,
+.News .pagination .pagging-btn.active {
+  transform: scale(1.1);
+}
+.News .pagination .pagging-btn {
+  margin: 10px 5px;
+  color: var(--spancolor);
+  background-color: var(--bg-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.News .pagging-btn i {
+  cursor: pointer;
+}
+.News .pagination .pagging-btn.active {
+  box-shadow: 0 0 8px var(--bg-color);
+  background-color: var(--active-bg-color);
+  color: var(--white);
+}
+
+.News .pagging-btn:focus,
+.News .pagging-btn::selection {
+  border: none;
+  outline: none;
+}

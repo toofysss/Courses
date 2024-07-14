@@ -1,0 +1,68 @@
+.Client {
+  padding-bottom: 6rem;
+}
+
+.Client .heading {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.Client .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.Client .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+.Client .Client-column {
+  text-align: start;
+
+  margin-block: 15px;
+}
+.Client .Client-column h2,
+.Client .content h2 {
+  font-size: 2rem;
+  color: var(--spancolor);
+}
+.Client .Client-column p,
+.Client .content p {
+  font-size: 1.5rem;
+  color: var(--black);
+  opacity: 0.5;
+  margin-block: 25px;
+}
+.Client .Client-column h3 {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: var(--black);
+  opacity: 0.5;
+}
+.Client .Client-column i {
+  color: var(--spancolor);
+  font-size: 2rem;
+}
+.Client .Client-content h4 {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.7;
+  margin-inline: 100px;
+}
+.Client .Client-content .content {
+  align-items: start;
+  justify-content: start;
+}
+.Client .item-container {
+  display: flex;
+}

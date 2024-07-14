@@ -1,0 +1,354 @@
+.Signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Signin .wrapper {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(40deg, var(--spancolor), var(--black)) 1;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.Signin .wrapper .form-box {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Signin .wrapper .form-box.login {
+  left: 0;
+  padding: 0 60px 0 40px;
+}
+.Signin .wrapper .form-box.login .animation {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition: 0.7s ease;
+  transition-delay: calc(0.1s * var(--j));
+}
+.Signin .wrapper.active .form-box.login .animation {
+  transform: translateX(-120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(0.1s * var(--i));
+}
+.Signin .wrapper .info-text.login .animation {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+
+  transition: 0.7s ease;
+  transition-delay: calc(0.1s * var(--j));
+}
+.Signin .wrapper.active .info-text.login .animation {
+  transform: translateX(120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(0.1s * var(--i));
+}
+.Signin .form-box h2 {
+  font-size: 32px;
+  color: var(--black);
+  text-align: center;
+}
+
+.Signin .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 25px 0;
+}
+.Signin input {
+  text-transform: lowercase;
+
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding-right: 23px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--spancolor);
+}
+.Signin .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: var(--black);
+  pointer-events: none;
+  font-size: 1.1rem;
+  transition: 0.5s;
+}
+.Signin .input-box input:focus ~ label,
+.Signin .input-box input:valid ~ label {
+  top: -3px;
+  color: var(--spancolor);
+  font-weight: 700;
+}
+.Signin .input-box input:focus ~ i,
+.Signin .input-box input:valid ~ i {
+  color: var(--spancolor);
+}
+.error-message {
+  font-size: 1.2rem;
+  color: var(--spancolor);
+  font-weight: 500;
+}
+.Signin .input-box i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: var(--black);
+  pointer-events: none;
+  font-size: 1.8rem;
+}
+.Signin .btn:focus,
+.Signin .btn::selection {
+  background: linear-gradient(var(--black), var(--spancolor)) !important;
+  outline: none !important;
+  border: none !important;
+}
+.Signin .btn {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(var(--black), var(--spancolor)) !important;
+  cursor: pointer;
+  outline: none;
+  border-radius: 40px;
+  font-size: 16px;
+  color: var(--white) !important;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.Signin .form-box .logreg-link {
+  font-size: 14.5px;
+  color: var(--black);
+  text-align: center;
+  margin: 20px 0 10px;
+}
+.Signin .logreg-link p button {
+  color: var(--spancolor) !important;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.Signin .logreg-link p button::selection,
+.Signin .logreg-link p button:focus {
+  outline: none;
+  border: none;
+}
+.Signin .wrapper .info-text {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Signin .wrapper .info-text.login {
+  right: 0;
+  text-align: center;
+  padding: 0 20px 60px 80px;
+}
+
+.Signin .info-text h2 {
+  font-size: 2.7rem;
+  color: var(--white);
+  margin: 15px;
+}
+
+.Signin .info-text p {
+  font-size: 16px;
+  color: var(--white);
+  opacity: 0.8;
+}
+.Signin .wrapper .bg-animate {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 850px;
+  height: 600px;
+  background: linear-gradient(45deg, var(--black), var(--spancolor));
+  transform: rotate(10deg) skewY(40deg);
+  transform-origin: bottom right;
+  transition: 1.5s ease;
+  transition-delay: 1.6s;
+}
+.Signin .wrapper.active .bg-animate {
+  background: linear-gradient(45deg, var(--spancolor), var(--black));
+
+  transform: rotate(0) skewY(0);
+  transition-delay: 0.5s;
+}
+.Signin .wrapper .bg-animate2 {
+  position: absolute;
+  top: 100%;
+  left: 250px;
+  width: 850px;
+  height: 700px;
+  background: var(--bg-color);
+  transform: rotate(0) skewY(0);
+  transform-origin: bottom left;
+  transition: 1.5s ease;
+  transition-delay: 0.5s;
+}
+.Signin .wrapper.active .bg-animate2 {
+  transform: rotate(-11deg) skewY(-41deg);
+  transition-delay: 1.2s;
+}
+.Signin .wrapper .form-box.rigester {
+  pointer-events: none;
+  right: 0;
+  padding: 0 40px 0 60px;
+}
+
+.Signin .wrapper .form-box.rigester .animation {
+  transform: translateX(120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: 0.7s ease;
+  transition-delay: calc(0.1s * var(--j));
+}
+.Signin .wrapper.active .form-box.rigester {
+  pointer-events: auto;
+}
+.Signin .wrapper.active .form-box.rigester .animation {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(0.1s * var(--i));
+}
+.Signin .wrapper .info-text.rigester {
+  left: 0;
+  text-align: center;
+  padding: 0 80px 60px 20px;
+  pointer-events: none;
+}
+.Signin .wrapper .info-text.rigester .animation {
+  transform: translateX(-120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(0.1s * var(--j));
+  transition: 0.7s ease;
+}
+.Signin .wrapper.active .info-text.rigester .animation {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(0.1s * var(--i));
+}
+
+@media (max-width: 749px) {
+  .Signin .wrapper .form-box.rigester {
+    padding: 0 40px 0 100px;
+  }
+  .Signin .wrapper .bg-animate {
+    right: -60px;
+  }
+  .Signin .wrapper .bg-animate2 {
+    left: 190px;
+  }
+  .Signin .wrapper .form-box {
+    width: 61%;
+  }
+  .Signin .wrapper .info-text.login {
+    pointer-events: none;
+    padding: 0 20px 230px 80px;
+  }
+  .Signin .wrapper .info-text.rigester {
+    padding: 0 80px 230px 20px;
+  }
+  .Signin .wrapper .info-text {
+    width: 60%;
+  }
+}
+
+@media (max-width: 701px) {
+  .Signin .wrapper .bg-animate {
+    right: -100px;
+  }
+  .Signin .wrapper .bg-animate2 {
+    left: 150px;
+  }
+}
+@media (max-width: 623px) {
+  .Signin .info-text h2 {
+    font-size: 2.1rem;
+  }
+  .Signin .info-text p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 643px) {
+  .Signin .wrapper .form-box.rigester {
+    padding: 0 40px 0 60px;
+  }
+}
+@media (max-width: 600px) {
+  .Signin .wrapper .form-box {
+    width: 70%;
+  }
+  .Signin .wrapper .bg-animate {
+    right: -150px;
+  }
+  .Signin .wrapper .bg-animate2 {
+    left: 100px;
+  }
+  .Signin .wrapper .info-text.login {
+    padding: 0 0 270px 80px;
+  }
+  .Signin .wrapper .info-text.rigester {
+    padding: 0 80px 270px 0;
+  }
+  .Signin .wrapper .form-box.rigester {
+    padding: 0 40px 0 80px;
+  }
+}
+@media (max-width: 561px) {
+  .Signin .wrapper .form-box {
+    width: 80%;
+  }
+  .Signin .wrapper .bg-animate {
+    right: -200px;
+  }
+  .Signin .wrapper .bg-animate2 {
+    left: 50px;
+  }
+  .Signin .wrapper .form-box.login {
+    padding: 0 90px 0 25px;
+  }
+}
+@media (max-width: 500px) {
+  .Signin .bg-animate,
+  .Signin .wrapper .info-text {
+    display: none;
+  }
+  .Signin .wrapper .form-box {
+    width: 100%;
+  }
+  .Signin .wrapper .form-box.login {
+    padding: 0 30px 0 30px;
+  }
+  .Signin .wrapper .form-box.rigester {
+    padding: 0 30px 0 30px;
+  }
+  .Signin .wrapper.active .form-box.rigester .animation {
+    transition-delay: calc(0.1s);
+  }
+  .Signin .wrapper .form-box.login .animation {
+    transition-delay: calc(0.1s);
+  }
+}

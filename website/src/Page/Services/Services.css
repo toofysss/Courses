@@ -1,0 +1,72 @@
+.Services {
+  padding-bottom: 6rem;
+  align-items: center;
+}
+.Services .heading {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.Services .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.Services .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+
+.Services .Services-img .card:hover,
+.Services .Services-img .card .content:hover,
+.Services .Services-img .card .content .title:hover,
+.Services .Services-img .card .content i:hover,
+.Services .Services-img .card .content p:hover {
+  cursor: pointer;
+}
+.Services .Services-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.Services .Services-img .card {
+  text-align: center;
+  background: var(--bg-color);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  padding: 20px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Services .Services-img .card .content .icon i {
+  font-size: 40px;
+  color: var(--spancolor);
+}
+.Services .Services-img .card .content .title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--titlecolor);
+  transition: 0.3s;
+}
+
+.Services .Services-img .card .content p {
+  font-size: 1.5rem;
+  color: var(--black);
+  opacity: 0.5;
+}
+.Services .Services-img .card .content {
+  transition: 0.3s;
+}
+
+.Services .Services-img .card:hover .content {
+  transform: scale(1.07);
+}

@@ -1,0 +1,118 @@
+.Price {
+  padding-bottom: 6rem;
+}
+
+.Price .heading {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.Price .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.Price .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+.Price .Cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Price .Cards .Card {
+  cursor: pointer;
+
+  margin-bottom: 50px;
+  padding-inline: 10px;
+  border-radius: 0.8rem;
+}
+
+.Price .offer {
+  position: relative;
+  width: 250px;
+  min-height: 300px;
+  border-radius: 10px;
+  color: var(--white);
+  margin: 1rem;
+}
+
+.Price .offer-info {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  clip-path: polygon(100% 0, 100% 83%, 60% 83%, 51% 100%, 0 100%, 0 0);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: linear-gradient(
+    -35deg,
+    var(--black),
+    var(--spancolor),
+    var(--black)
+  );
+}
+.Price .offer-info h1 {
+  margin-top: 5px;
+  font-size: 2.4rem;
+}
+.Price .offer-options p {
+  line-height: 1.5;
+  font-weight: 600;
+}
+.Price .offer-options span {
+  color: var(--white);
+  padding-inline: 0.5rem;
+}
+.Price .footer-info {
+  width: 6rem;
+}
+.Price .footer-info h1 {
+  font-size: 3em;
+}
+.Price .btnContainer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 11.5rem;
+  height: 4.8rem;
+  clip-path: polygon(17% 0%, 100% 0, 100% 100%, 0 100%, 0 100%);
+  transition: transform 1s;
+}
+.Price .btnContainer button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px 10px 10px 0;
+  background: linear-gradient(
+    -35deg,
+    var(--black),
+    var(--spancolor),
+    var(--black)
+  );
+  color: var(--white);
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  padding-left: 1rem;
+  transition: background 1s;
+}
+.Price .btnContainer:hover {
+  transform: scale(0.9);
+}
+.Price .item-container {
+  display: flex;
+}

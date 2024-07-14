@@ -1,0 +1,115 @@
+.gallery {
+  padding-bottom: 6rem;
+  align-items: center;
+}
+
+.gallery .heading {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.gallery .heading span {
+  position: relative;
+  color: var(--black);
+}
+
+.gallery .heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--spancolor);
+}
+.gallery-img img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.gallery-img img {
+ 
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  height: 250px;
+  width: 100%;
+  border-radius: 10%;
+}
+
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery .pagination {
+ 
+  margin-top: 35px;
+  margin-inline: auto;
+  display: flex;
+  background-color: var(--spancolor);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .pagination .pagging-btn:hover,
+.gallery .pagination .pagging-btn.active {
+  transform: scale(1.1);
+}
+.gallery .pagination .pagging-btn {
+  margin: 10px 5px;
+  color: var(--spancolor);
+  background-color: var(--bg-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.gallery .pagging-btn i {
+  cursor: pointer;
+}
+.gallery .pagination .pagging-btn.active {
+  box-shadow: 0 0 8px var(--bg-color);
+  background-color: var(--active-bg-color);
+  color: var(--white);
+}
+
+.gallery .pagging-btn:focus,
+.gallery .pagging-btn::selection {
+  border: none;
+  outline: none;
+}
+
+.gallery .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.gallery .popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+.gallery .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  font-size: 24px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.gallery .close-btn i {
+  cursor: pointer;
+}
